@@ -24,7 +24,7 @@ $.each(hours, function (index, value) {
 
 });
 var auditTime = function () {
-    currentTime = moment().format("h:m:s A");
+
     if (moment().isBetween(hour9, hour10)) {
         $("#timeblock9").addClass("present");
     }
