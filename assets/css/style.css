@@ -80,3 +80,12 @@ ul.event-group {
   color: #000000;
   transition: all .3s ease-in-out;
 }
+
+.event-group{
+  padding: 8px;
+}
+.events{
+  margin: 0;
+  height: 63px;
+  color: #000000;
+}

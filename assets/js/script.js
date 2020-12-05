@@ -13,13 +13,14 @@ var hour17 = moment().hour(17);
 var hour18 = moment().hour(18);
 var hours = [hour9, hour10, hour11, hour12, hour13, hour14, hour15, hour16, hour17];
 
+var events = JSON.parse(localStorage.getItem('eventList')) || [];
+
 $("#currentDay").text(currentDay);
 
 $.each(hours, function (index, value) {
     $(".container").append("<div class='row'><div class='col-2 hour text-right' id='hour" +
-        (index + 9) + "'><span>" + value.format("h A") + "</span></div><div class='col-8 event' id='timeblock" +
-        (index + 9) + "'><ul class='event-group' id='event" +
-        (index + 9) + "'><li class='event-group-item'><p class='m-1'></p></li></ul></div>" +
+        (index + 9) + "'><span>" + value.format("h A") + "</span></div><div class='col-8 event-group' id='timeblock" +
+        (index + 9) + "'><p class='events'></p></div>" +
         "<div class='col-2 saveBtn'><i class='fas fa-save'></i></div></div></div>");
 
 });
@@ -124,6 +125,37 @@ var auditTime = function () {
     };
 }
 
+
+$(".event-group").on("click", "p", function () {
+    var text = $(this)
+        .text();
+    var textInput = $("<textarea>")
+        .addClass("form-control")
+        .val(text);
+    $(this).replaceWith(textInput);
+    textInput.trigger("focus");
+});
+
+$(".event-group").on("blur", "textarea", function () {
+    // get the textarea's current value/text
+    var text = $(this)
+        .val()
+        .trim();
+
+    //events[status][index].text = text;
+    // saveTasks();
+
+    // recreate p element
+    var eventP = $("<p>")
+        .addClass("events")
+        .text(text);
+
+    // replace textarea with p element
+    $(this).replaceWith(eventP);
+
+});
+
+
 // This function runs but the time is never refreshed?
 setInterval(function () {
     $(".event").each(function (index, el) {
@@ -131,3 +163,5 @@ setInterval(function () {
         console.log(currentTime);
     });
 }, (1000 * 60)); // 1000ms x 60 = 1 minute x 30 = 30 minutes
+
+auditTime();
