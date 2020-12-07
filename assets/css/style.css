@@ -9,8 +9,7 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  padding: 4px 10px;
 }
 
 .jumbotron {
@@ -63,7 +62,7 @@ ul.event-group {
   color: white;
 }
 
-.saveBtn {
+.save-delete {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -72,20 +71,30 @@ ul.event-group {
   text-align: center;
   padding-top: 25px;
 }
-.saveBtn i{
+.save-delete i.fa-save{
   font-size: 30px;
 }
-.saveBtn i:hover {
+.save-delete i.fa-save:hover {
   font-size: 30px;
   color: #000000;
   transition: all .3s ease-in-out;
 }
-
+.save-delete i.fa-trash{
+  font-size: 18px;
+  padding-left: 8px;
+}
+.save-delete i.fa-trash:hover {
+  font-size: 18px;
+  color: #ff0000b9;
+  transition: all .5s ease-in-out;
+}
 .event-group{
-  padding: 8px;
+  padding: 2px 0 0 2px;
 }
 .events{
   margin: 0;
-  height: 63px;
+  height: 75px;
   color: #000000;
+  font-size: 14px;
+  line-height: 22px;
 }
