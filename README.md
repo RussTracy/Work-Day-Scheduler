@@ -6,6 +6,8 @@ Week 5: Third-Party API's Challenge
 
 This site was designed to enhance my skills using 3rd party API's. This project used BootStrap and jQuery as well as moment.js to create a Work Day Scheduler.
 
+![Screenshot 2021-05-06 201942](https://user-images.githubusercontent.com/63411329/117380783-88ee7600-aea8-11eb-8b97-d5c809a19ecf.png)
+
 
 ## Built With
 * HTML
@@ -18,9 +20,9 @@ This site was designed to enhance my skills using 3rd party API's. This project 
 [Work Day Scheduler](https://russtracy.github.io/Work-Day-Scheduler/)
 
 ## Contribution
-Made by [Russ Tracy]
+Made by [Brad Spurrell]
 
 ## Site Image
 ![alt text](assets/images/WorkDaySchedulerScreenShot.jpg)
 
-### ©️2020 Russ Tracy
+
